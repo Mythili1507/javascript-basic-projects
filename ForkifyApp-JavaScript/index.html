@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forkify App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div class="container">
+  <div class="child-container">
+  <img class="logo-img" src="logo.09084f39.png"/>
+
+
+  <input type="text" id="searchInput">
+
+  <button id="searchBtn">Search</button>
+
+  <button  class="add-recipe" id="addRecipeBtn">Add Recipe</button>
+</div>
+ <div >
+  <button id="bookmarksButton" class="bookmarks-btn">Bookmarks</button>
+  <div>
+    <div id="bookmarks-popup" class="bookmarks-container hidden">...</div>
+  </div>
+ </div>
+</div>
+  <div id="recipe-list" class="recipe-index-list"></div>
+
+  <div id="recipe-detail" class="recipe-index-detail"></div>
+
+  <button id="prevBtn">Prev</button>
+  <button id="nextBtn">Next</button>
+
+<div id="addRecipeModal" class="add-recipe-modal">
+  <div class="add-recipe-content">
+      <span  id="closeModal" class="close-modal" >&times;</span>
+
+          <form id="add-recipe-form" class="add-recipe-form"  onsubmit="onFormSubmit(event)" >
+                <div class="form-data-content">
+                  <div class="form-recipe-data">
+                    <h3>RECIPE DATA</h3>
+                    <div class="form-recipe-data-inner">
+                      <div><label>Title</label><input type="text" name="title" required/></div>
+                      <div><label>Publisher</label><input type="text" name="publisher" required/></div>
+                      <div><label>Source Url</label><input type="text" name="source_url" required /></div>
+                      <div><label>Image Url</label><input type="text" name="image_url"  required /></div>
+                      <div><label>Servings</label><input type="number" name="servings" required /></div>
+                      <div><label>Cooking Time</label><input type="number" name="cooking_time" required/></div>
+                    </div>
+                  </div>
+                  <div class="form-data-ingredients">
+                    <h3>INGREDIENTS</h3>
+                    <div class="form-ingredient-data-inner">
+                    <div><label>Ingredient 1</label><input type="text" name="ingredient_0" required/></div>
+                    <div><label>Ingredient 2</label><input type="text" name="ingredient_1" required/></div>
+                    <div><label>Ingredient 3</label><input type="text" name="ingredient_2" required/></div>
+                    <div><label>Ingredient 4</label><input type="text" name="ingredient_3" required/></div>
+                   <div> <label>Ingredient 5</label><input type="text" name="ingredient_4" required/></div>
+                   <div> <label>Ingredient 6</label><input type="text" name="ingredient_5" required/></div>
+                  </div>
+                  </div>
+                </div>
+
+                <div class="upload-recipe">
+                  <input type="submit" value="Upload " id="upload-recipe"/>
+                </div>
+
+           </form>
+
+  </div>
+</div>
+
+
+
+
+<script src="app.js" type="module"></script>
+<script src="constants.js" type="module"></script>
+<script src="components/bookmark.js" type="module"></script>
+<script src="components/recipeIndex.js" type="module"></script>
+<script src="components/recipeDetail.js" type="module"></script>
+<script src="components/addReceipe.js" type="module"></script>
+
+</body>
+</html>
